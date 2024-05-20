@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello-clone</title>
+    <link rel="shortcut icon" href="./images.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="theme-dark">
+    <header class="border-b-[1px] border-borderColor  px-5 py-2 flex justify-between">
+        <img class="block icon py-2" src="https://trello.com/assets/d947df93bc055849898e.gif" alt="logo">
+    </header>
+
+    <main class=" h-[100vh] ">
+
+        <div class="home-page  max-w-[825px] mx-auto">
+            <div class="avatar placeholder flex items-center gap-2 mb-6 border-b border-borderColor px-5">
+
+                <div class="avatar  placeholder">
+                    <div
+                        class="bg-[#DB6BB1] text-homePageBackground profile-picture  rounded-md w-[60px] text-[35px] bg-grand  font-bold">
+                        S
+                    </div>
+                </div>
+                <div class="flex flex-col items-start">
+                    <h2 class="text-xl font-bold">Suraj Kumar's workspace</h2>
+                    <div class="flex self-start ">
+                        <svg width="16" height="16" role="presentation" focusable="false" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5 11C5 9.89543 5.89543 9 7 9H8H10H14H16H17C18.1046 9 19 9.89543 19 11V19C19 20.1046 18.1046 21 17 21H7C5.89543 21 5 20.1046 5 19V11ZM10 11H14H16H17V19H7V11H8H10ZM14 15C14 16.1046 13.1046 17 12 17C10.8954 17 10 16.1046 10 15C10 13.8954 10.8954 13 12 13C13.1046 13 14 13.8954 14 15Z"
+                                fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.3817 5.69846C10.0982 6.10344 10 6.63103 10 7V9H8V7C8 6.36897 8.15175 5.39656 8.74327 4.55154C9.37523 3.64874 10.4367 3 12 3C13.5633 3 14.6248 3.64874 15.2567 4.55154C15.8482 5.39656 16 6.36897 16 7V9H14V7C14 6.63103 13.9018 6.10344 13.6183 5.69846C13.3752 5.35126 12.9367 5 12 5C11.0633 5 10.6248 5.35126 10.3817 5.69846Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <p class="text-sm">Private</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <i class="w-6 h-6 fa-regular fa-user px-3"></i>
+            <p class="text-base font-bold inline-block px-3">Your boards</p>
+
+
+            <div class="  home-page-container p-3  grid grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-3 lg:grid-cols-4">
+
+                <div class="create-new-board relative text-white font-normal grid place-items-center bg-[#292F33] ">
+                    Create
+                    new board
+
+                    <div class="hidden absolute p-3 bg-inherit rounded-md top-0 left-[105%]">
+                        <div class="flex items-center justify-between border-b border-borderColor">
+                            <p>Create a board</p>
+                            <button class="close btn btn-square bg-inherit border-none  hover:bg-slate-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <form class="create-board-form input-container  py-3">
+                            <label for="create-board-input">Board Title <span class="text-rose-600">*</span></label>
+                            <p class="hidden text-xs text-red-600">Invalid Board Title</p>
+                            <input
+                                class="rounded-sm p-1 bg-transparent border border-blue-400 input-board-title focus:outline-none"
+                                type="text" id="create-board-input" autocomplete="off">
+                            <button type="submit" class="rounded-sm w-full mt-3 ">Create</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hidden  boards-info-container flex">
+            <aside class="aside-header-part min-w-48 h-[100vh] flex-grow-1 text-white bg-asideColor">
+                <div class="h-[8%] relative ">
+                    <div class="p-3 flex justify-between items-center mb-4 ">
+                        <p>Your boards</p>
+                        <button class="text-2xl add-board-btn">+</button>
+                    </div>
+                    <div class="z-10 hidden  absolute p-3 bg-homePageBackground rounded-md top-3 left-[105%]">
+                        <div class="flex items-center justify-between border-b border-borderColor">
+                            <p>Create a board</p>
+                            <button class="close btn btn-square bg-inherit border-none  hover:bg-slate-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <form class="create-board-form input-container  py-3">
+                            <label for="create-board-input">Board Title <span class="text-rose-600">*</span></label>
+                            <p class="hidden text-xs text-red-600">Invalid Board Title</p>
+                            <input
+                                class="rounded-sm p-1 bg-transparent border border-blue-400 input-board-title focus:outline-none"
+                                type="text" id="create-board-input">
+                            <button type="submit" class="rounded-sm w-full mt-3 ">Create</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <ul class="h-[92%]  flex flex-col boards-container"></ul>
+            </aside>
+            <section class="flex-grow  overflow-scroll gap-4 flex p-3 scrollbar-hidden">
+
+                <ul class="lists-container flex gap-4 "></ul>
+
+                <button class="add-list-btn">+ Add another list</button>
+                <form class="add-list-container hidden min-w-72 p-3 h-max bg-black rounded-md">
+                    <p class="text-xs text-red-600 hidden">Invalid Listname</p>
+                    <input
+                        class="input-list outline-none focus:border border-skyblue mb-2 resize-none max-h-60 w-full px-2 pt-2 pb-8 rounded-md block bg-gray-700"
+                        name="card-name" id="input-card-container" placeholder="Enter list title..."
+                        autocomplete="off"></input>
+                    <button type="submit" class="create-list-btn text-black rounded-sm bg-skyblue p-2">Add list</button>
+                    <button class="ml-2 close-create-list-btn"><i class="text-white fa-solid fa-xmark"></i></button>
+                </form>
+
+            </section>
+        </div>
+
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+
+
+</html>

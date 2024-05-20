@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profile-picture{
+    background: linear-gradient(to bottom, var(--ds-background-accent-magenta-subtle, #cd5a91) 40%,var(--ds-background-accent-magenta-bolder, #b22865) );
+}
+.theme-white{
+    @apply text-[#172b4d] bg-white
+}
+.theme-dark{
+    @apply text-[#b6c2cf] bg-homePageBackground 
+}
+.create-new-board{
+    @apply h-24 p-2 rounded-md   
+}
+
+.icon{
+     width: 75px;
+     height: 32px;
+}
+
+.boards-container::-webkit-scrollbar{
+    display: none;
+}
+.list-header{
+    @apply  py-2  flex justify-between items-center 
+}
+.add-list-btn{
+    @apply border-2 border-transparent px-3 py-2 bg-gray-700 mb-2 rounded-md flex justify-between items-center
+            min-w-72 h-max text-left text-white
+}
+.card{
+    
+    @apply border-2 border-transparent px-3 py-2 bg-gray-700 mb-2 rounded-md grid grid-cols-1fr-max
+}
+.list{
+    @apply relative h-max pb-3 max-w-max min-w-72 rounded-md bg-black text-white px-3
+}
+.board{
+    @apply max-w-52  px-3 py-2 relative flex justify-between items-center 
+}
+.home-page-board{
+    @apply text-white font-bold  h-24 p-2 rounded-md;
+}
+.delete-card{
+    @apply bg-slate-900 px-2 py-1 hover:bg-gray-500  absolute top-0 left-10
+}
+.board:hover{
+    background-color: #4e4e52;
+    & i{
+        opacity: 1;
+    }
+}
+.list-action{
+    @apply  w-full py-1 px-3 mb-1 text-left hover:bg-[#4e4e52];
+}
+.list-actions-container{
+    @apply  z-10 min-w-48 text-white bg-asideColor   absolute top-8 right-8 translate-x-full
+}
+
+.list-actions-header-part{
+    @apply  px-3 py-3 flex justify-between items-center mb-4 border-b border-gray-500;
+}
+.add-card-btn{
+    @apply border-2 border-transparent px-3 py-2 bg-gray-700 mb-2 rounded-md flex justify-between items-center w-full text-left
+}
+#input-card-container,.input-list{
+    @apply mb-2 resize-none max-h-60 w-full px-2 pt-2 pb-8 rounded-md block bg-gray-700
+}
+.create-card-btn{
+    @apply  bg-skyblue p-2 rounded-sm;
+}
+.card:hover{
+    & button{
+        opacity:1;
+    }
+    @apply  border-skyblue
+}
+
+#create-board-input:focus,
+#create-board-input:valid{
+    & + button{
+        @apply bg-sky-500
+    }
+}
+
+.selected{
+    @apply bg-boardSelected
+}
+
+
+
+
+.scrollbar-hidden::-webkit-scrollbar{
+    display: none;
+}
